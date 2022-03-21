@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2B2301B227E8E75E00095852 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2B2301B127E8E75E00095852 /* main.cpp */; };
+		2B2301BB27E8EA7F00095852 /* stack.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2B2301BA27E8EA7F00095852 /* stack.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +26,8 @@
 /* Begin PBXFileReference section */
 		2B2301AE27E8E75E00095852 /* HW1-Maze-With-Stacks */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "HW1-Maze-With-Stacks"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B2301B127E8E75E00095852 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		2B2301B927E8E88300095852 /* stack.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = stack.h; sourceTree = "<group>"; };
+		2B2301BA27E8EA7F00095852 /* stack.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = stack.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +61,8 @@
 			isa = PBXGroup;
 			children = (
 				2B2301B127E8E75E00095852 /* main.cpp */,
+				2B2301B927E8E88300095852 /* stack.h */,
+				2B2301BA27E8EA7F00095852 /* stack.cpp */,
 			);
 			path = "HW1-Maze-With-Stacks";
 			sourceTree = "<group>";
@@ -119,6 +124,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B2301BB27E8EA7F00095852 /* stack.cpp in Sources */,
 				2B2301B227E8E75E00095852 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
