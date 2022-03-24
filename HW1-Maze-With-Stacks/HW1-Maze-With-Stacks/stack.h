@@ -10,6 +10,7 @@
 
 template<class Object>
 class Stack {
+public:
     Stack();
     Stack(const Stack&rhs);
     ~Stack();
@@ -21,13 +22,14 @@ class Stack {
     const Object &top() const;
     //const Stack & operator=(const Stack&rhs);
     
-public:
+private:
     struct Node{
         Object current;
         Node *next;
         Node(const Object & _current, Node * n = nullptr): current(_current), next(n){}
     };
     Node *topOfStack;
+    
 };
 
 #endif /* stack_h */
