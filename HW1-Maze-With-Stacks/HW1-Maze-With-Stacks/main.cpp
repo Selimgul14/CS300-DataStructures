@@ -10,7 +10,7 @@ struct Cell{
     int x, y;
     bool up, down, left, right;
     bool isVisited;
-    
+
     Cell(){};
     Cell(int x, int y){
         x = x;
@@ -32,7 +32,7 @@ void generate(int rows, int cols, int ID){
 void saveMaze(vector<vector<Cell> > maze, int num){
     string filename = "maze_" + to_string(num) + ".txt";
     
-    ofstream out(filename);
+    ofstream out(filename); 
     out << maze[0].size() << " " << maze.size() << "\n";
     for (int j = 0; j < maze[0].size(); j++){
         for(int i = 0; i < maze.size(); i++){
