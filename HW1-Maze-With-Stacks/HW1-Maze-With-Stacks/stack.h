@@ -1,35 +1,48 @@
-//
-//  stack.h
-//  HW1-Maze-With-Stacks
-//
-//  Created by Selim Gül on 21.03.2022.
-//
+#include <string>
+#include <iostream> 
+#ifndef _stack_h
+#define _stack_h
 
-#ifndef stack_h
-#define stack_h
 
-template<class Object>
-class Stack {
+
+using namespace std;
+
+template <class Object>
+class Stack
+{
 public:
     Stack();
-    Stack(const Stack&rhs);
+    Stack(const Stack& rhs);
     ~Stack();
-    void pop();
-    void push(const Object&o);
-    void makeEmpty();
+
     bool isEmpty() const;
+    bool isFull() const;
+    void makeEmpty();
+
+    void pop();
+    void push(const Object& x);
     Object topAndPop();
-    const Object &top() const;
-    //const Stack & operator=(const Stack&rhs);
-    
+    const Object& top() const;
+
+    const Stack& operator=(const Stack& rhs);
+
 private:
-    struct Node{
-        Object current;
-        Node *next;
-        Node(const Object & _current, Node * n = nullptr): current(_current), next(n){}
+    struct ListNode
+    {
+        Object   element;
+        ListNode* next;
+
+        ListNode(const Object& theElement, ListNode* n = NULL)
+            : element(theElement), next(n) { }
     };
-    Node *topOfStack;
-    
+
+    ListNode* topOfStack;  // list itself is the stack
 };
 
-#endif /* stack_h */
+struct Underflow : public exception {
+    const char* What() const throw() {
+        return "Stack Underflow: No element left in stack to perform operation";
+    }
+};
+
+#endif
