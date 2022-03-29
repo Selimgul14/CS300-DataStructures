@@ -182,6 +182,7 @@ void savePath(Stack<Cell> mazeStack, string path) {
 void findPath(int x_entry, int y_entry, int x_exit, int y_exit, int ID) {
     string filename;
     filename += "maze_" + to_string(ID) + ".txt";
+    cout << filename;
     vector<vector<Cell> > Matrix = readMaze(filename);
     Stack<Cell> mazeStack;
     RandGen rand;
@@ -247,13 +248,13 @@ int main() {
     int ID;
     cout << "Enter a maze ID between 1 to " << count << " inclusive to find a path: ";
     cin >> ID;
-
+    
     int x_entry, x_exit, y_entry, y_exit;
     cout << "Enter x and y coordinates of the entry points (x, y) or (column, row): ";
     cin >> x_entry >> y_entry;
     cout << "Enter x and y coordinates of the expit points (x, y) or (column, row): ";
     cin >> x_exit >> y_exit;
-    findPath(ID, x_entry, y_entry, x_entry, y_exit);
+    findPath(x_entry, y_entry, x_entry, y_exit, ID);
 
     return 0;
 }
